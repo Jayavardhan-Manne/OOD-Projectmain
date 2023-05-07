@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<system>
+	<pattern name="Factory Method">
+		<instance>
+			<role name="Creator" element="died.izaguirre.haulet.tp.dao.interfaces.ParadaDao" />
+			<role name="FactoryMethod()" element="died.izaguirre.haulet.tp.dao.interfaces.ParadaDao::findByNroParada(java.lang.Integer):died.izaguirre.haulet.tp.tablas.Parada" />
+		</instance>
+	</pattern>
+	<pattern name="Prototype" />
+	<pattern name="Singleton">
+		<instance>
+			<role name="Singleton" element="died.izaguirre.haulet.tp.controladores.ControladorGrafo" />
+			<role name="uniqueInstance" element="died.izaguirre.haulet.tp.controladores.ControladorGrafo::instance:died.izaguirre.haulet.tp.controladores.ControladorGrafo" />
+		</instance>
+	</pattern>
+	<pattern name="(Object)Adapter" />
+	<pattern name="Command" />
+	<pattern name="Composite" />
+	<pattern name="Decorator" />
+	<pattern name="Observer" />
+	<pattern name="State">
+		<instance>
+			<role name="State" element="died.izaguirre.haulet.tp.dao.interfaces.CaminoDao" />
+			<role name="Context" element="died.izaguirre.haulet.tp.controladores.ControladorLineas" />
+			<role name="state" element="died.izaguirre.haulet.tp.controladores.ControladorLineas::caminoDao:died.izaguirre.haulet.tp.dao.interfaces.CaminoDao" />
+			<role name="Request()" element="died.izaguirre.haulet.tp.controladores.ControladorLineas::cargarParadas():void" />
+		</instance>
+	</pattern>
+	<pattern name="Strategy" />
+	<pattern name="Bridge" />
+	<pattern name="Template Method" />
+	<pattern name="Visitor" />
+	<pattern name="Proxy" />
+	<pattern name="Proxy2" />
+	<pattern name="Chain of Responsibility" />
+</system>
+

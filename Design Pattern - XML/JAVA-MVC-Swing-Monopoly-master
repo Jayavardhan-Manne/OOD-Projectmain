@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<system>
+	<pattern name="Factory Method" />
+	<pattern name="Prototype" />
+	<pattern name="Singleton" />
+	<pattern name="(Object)Adapter">
+		<instance>
+			<role name="Adaptee" element="control.Control" />
+			<role name="Adapter" element="model.PlayerModel" />
+			<role name="adaptee" element="model.PlayerModel::control:control.Control" />
+			<role name="Request()" element="model.PlayerModel::updata(long):void" />
+		</instance>
+		<instance>
+			<role name="Adaptee" element="model.BackgroundModel" />
+			<role name="Adapter" element="ui.Background" />
+			<role name="adaptee" element="ui.Background::background:model.BackgroundModel" />
+			<role name="Request()" element="ui.Background::startPanel():void" />
+		</instance>
+		<instance>
+			<role name="Adaptee" element="model.BuildingsModel" />
+			<role name="Adapter" element="ui.Buildings" />
+			<role name="adaptee" element="ui.Buildings::informationBuilding:model.BuildingsModel" />
+			<role name="Request()" element="ui.Buildings::startPanel():void" />
+		</instance>
+		<instance>
+			<role name="Adaptee" element="model.EffectModel" />
+			<role name="Adapter" element="ui.Effect" />
+			<role name="adaptee" element="ui.Effect::effect:model.EffectModel" />
+			<role name="Request()" element="ui.Effect::paint(java.awt.Graphics):void" />
+		</instance>
+		<instance>
+			<role name="Adapter" element="ui.Dice" />
+			<role name="Adaptee" element="ui.DiceButton" />
+			<role name="adaptee" element="ui.Dice::diceButton:ui.DiceButton" />
+			<role name="Request()" element="ui.Dice::paint(java.awt.Graphics):void" />
+		</instance>
+		<instance>
+			<role name="Adapter" element="ui.Running" />
+			<role name="Adaptee" element="control.GameRunning" />
+			<role name="adaptee" element="ui.Running::running:control.GameRunning" />
+			<role name="Request()" element="ui.Running::paint(java.awt.Graphics):void" />
+		</instance>
+	</pattern>
+	<pattern name="Command" />
+	<pattern name="Composite" />
+	<pattern name="Decorator" />
+	<pattern name="Observer" />
+	<pattern name="State" />
+	<pattern name="Strategy" />
+	<pattern name="Bridge" />
+	<pattern name="Template Method" />
+	<pattern name="Visitor" />
+	<pattern name="Proxy" />
+	<pattern name="Proxy2" />
+	<pattern name="Chain of Responsibility" />
+</system>
+

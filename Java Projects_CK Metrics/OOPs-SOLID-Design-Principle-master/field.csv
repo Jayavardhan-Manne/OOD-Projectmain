@@ -1,0 +1,3 @@
+file,class,method,variable,usage
+D:\JAVA\Sivaaraj\sanjeev\project\OOPs-SOLID-Design-Principle-master\OOPs-SOLID-Design-Principle-master\src\main\java\com\prashant\solid\dependecyInversion\ShoppingMall.java,com.prashant.solid.dependecyInversion.ShoppingMall,ShoppingMall/1[com.prashant.solid.dependecyInversion.BankCard],bankCard,3
+D:\JAVA\Sivaaraj\sanjeev\project\OOPs-SOLID-Design-Principle-master\OOPs-SOLID-Design-Principle-master\src\main\java\com\prashant\solid\dependecyInversion\ShoppingMall.java,com.prashant.solid.dependecyInversion.ShoppingMall,doPurchaseSomething/1[long],bankCard,1

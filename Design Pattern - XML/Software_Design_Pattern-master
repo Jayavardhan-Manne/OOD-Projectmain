@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<system>
+	<pattern name="Factory Method">
+		<instance>
+			<role name="Creator" element="Factory.AbstractFactory" />
+			<role name="FactoryMethod()" element="Factory.AbstractFactory::getDevice(java.lang.String):Factory.iButton" />
+		</instance>
+	</pattern>
+	<pattern name="Prototype" />
+	<pattern name="Singleton">
+		<instance>
+			<role name="Singleton" element="Behaviour.Singletonobj" />
+			<role name="uniqueInstance" element="Behaviour.Singletonobj::singletonobj:Behaviour.Singletonobj" />
+		</instance>
+	</pattern>
+	<pattern name="(Object)Adapter">
+		<instance>
+			<role name="Adaptee" element="Commad_Factory.Light" />
+			<role name="Adapter" element="Commad_Factory.LightOnCommad" />
+			<role name="adaptee" element="Commad_Factory.LightOnCommad::light:Commad_Factory.Light" />
+			<role name="Request()" element="Commad_Factory.LightOnCommad::execute():void" />
+			<role name="Request()" element="Commad_Factory.LightOnCommad::undo():void" />
+		</instance>
+		<instance>
+			<role name="Adaptee" element="observer.subject" />
+			<role name="Adapter" element="observer.myTopicSubscriber" />
+			<role name="adaptee" element="observer.myTopicSubscriber::sub:observer.subject" />
+			<role name="Request()" element="observer.myTopicSubscriber::update():void" />
+		</instance>
+	</pattern>
+	<pattern name="Command">
+		<instance>
+			<role name="Receiver" element="Commad_Factory.Fan" />
+			<role name="ConcreteCommand" element="Commad_Factory.FanOffCommand" />
+			<role name="receiver" element="Commad_Factory.FanOffCommand::fan:Commad_Factory.Fan" />
+			<role name="Execute()" element="Commad_Factory.FanOffCommand::execute():void" />
+			<role name="Execute()" element="Commad_Factory.FanOffCommand::undo():void" />
+		</instance>
+		<instance>
+			<role name="Receiver" element="Commad_Factory.Fan" />
+			<role name="ConcreteCommand" element="Commad_Factory.FanOnCommand" />
+			<role name="receiver" element="Commad_Factory.FanOnCommand::fan:Commad_Factory.Fan" />
+			<role name="Execute()" element="Commad_Factory.FanOnCommand::execute():void" />
+			<role name="Execute()" element="Commad_Factory.FanOnCommand::undo():void" />
+		</instance>
+		<instance>
+			<role name="Receiver" element="Commad_Factory.Light" />
+			<role name="ConcreteCommand" element="Commad_Factory.LightOffCommand" />
+			<role name="receiver" element="Commad_Factory.LightOffCommand::light:Commad_Factory.Light" />
+			<role name="Execute()" element="Commad_Factory.LightOffCommand::execute():void" />
+			<role name="Execute()" element="Commad_Factory.LightOffCommand::undo():void" />
+		</instance>
+	</pattern>
+	<pattern name="Composite" />
+	<pattern name="Decorator" />
+	<pattern name="Observer">
+		<instance>
+			<role name="Observer" element="observer.observer" />
+			<role name="Subject" element="observer.myTopic" />
+			<role name="Notify()" element="observer.myTopic::notifyObserver():void" />
+		</instance>
+	</pattern>
+	<pattern name="State">
+		<instance>
+			<role name="Context" element="Commad_Factory.SimpleCommandCenter" />
+			<role name="State" element="Commad_Factory.ICommand" />
+			<role name="state" element="Commad_Factory.SimpleCommandCenter::iCommand:Commad_Factory.ICommand" />
+			<role name="Request()" element="Commad_Factory.SimpleCommandCenter::buttonWasPressed():void" />
+			<role name="Request()" element="Commad_Factory.SimpleCommandCenter::resetCommand():void" />
+		</instance>
+		<instance>
+			<role name="Context" element="SOLID.Test" />
+			<role name="State" element="SOLID.iSort" />
+			<role name="state" element="SOLID.Test::s:SOLID.iSort" />
+			<role name="Request()" element="SOLID.Test::sort(int[], int, int):void" />
+		</instance>
+		<instance>
+			<role name="Context" element="observer.myTopicSubscriber" />
+			<role name="State" element="observer.subject" />
+			<role name="state" element="observer.myTopicSubscriber::sub:observer.subject" />
+			<role name="Request()" element="observer.myTopicSubscriber::update():void" />
+		</instance>
+	</pattern>
+	<pattern name="Strategy" />
+	<pattern name="Bridge" />
+	<pattern name="Template Method" />
+	<pattern name="Visitor" />
+	<pattern name="Proxy" />
+	<pattern name="Proxy2" />
+	<pattern name="Chain of Responsibility" />
+</system>
+

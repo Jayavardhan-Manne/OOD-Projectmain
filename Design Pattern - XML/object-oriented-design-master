@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<system>
+	<pattern name="Factory Method" />
+	<pattern name="Prototype" />
+	<pattern name="Singleton" />
+	<pattern name="(Object)Adapter">
+		<instance>
+			<role name="Adaptee" element="com.ramesh.ood.principles.singleresponsibility.good.IEmailService" />
+			<role name="Adapter" element="com.ramesh.ood.principles.singleresponsibility.good.UserService" />
+			<role name="adaptee" element="com.ramesh.ood.principles.singleresponsibility.good.UserService::emailService:com.ramesh.ood.principles.singleresponsibility.good.IEmailService" />
+			<role name="Request()" element="com.ramesh.ood.principles.singleresponsibility.good.UserService::registerUser(com.ramesh.ood.principles.singleresponsibility.good.User):void" />
+		</instance>
+	</pattern>
+	<pattern name="Command" />
+	<pattern name="Composite" />
+	<pattern name="Decorator">
+		<instance>
+			<role name="Component" element="com.ramesh.ood.concepts.delegation.TravelBooking" />
+			<role name="Decorator" element="com.ramesh.ood.concepts.delegation.TicketBookingByAgent" />
+			<role name="component" element="com.ramesh.ood.concepts.delegation.TicketBookingByAgent::t:com.ramesh.ood.concepts.delegation.TravelBooking" />
+			<role name="Operation()" element="com.ramesh.ood.concepts.delegation.TicketBookingByAgent::bookTicket():void" />
+		</instance>
+	</pattern>
+	<pattern name="Observer" />
+	<pattern name="State">
+		<instance>
+			<role name="Context" element="com.ramesh.ood.concepts.loosecoupling.GoodTraveler" />
+			<role name="State" element="com.ramesh.ood.concepts.loosecoupling.Vehicle" />
+			<role name="state" element="com.ramesh.ood.concepts.loosecoupling.GoodTraveler::v:com.ramesh.ood.concepts.loosecoupling.Vehicle" />
+			<role name="Request()" element="com.ramesh.ood.concepts.loosecoupling.GoodTraveler::startJourney():void" />
+		</instance>
+		<instance>
+			<role name="Context" element="com.ramesh.ood.principles.dependencyinversion.bad.VoiletCustomerDaoImpl" />
+			<role name="State" element="com.ramesh.ood.principles.dependencyinversion.bad.DataSource" />
+			<role name="state" element="com.ramesh.ood.principles.dependencyinversion.bad.VoiletCustomerDaoImpl::dataSource:com.ramesh.ood.principles.dependencyinversion.bad.DataSource" />
+			<role name="Request()" element="com.ramesh.ood.principles.dependencyinversion.bad.VoiletCustomerDaoImpl::getConnection():java.sql.Connection" />
+		</instance>
+		<instance>
+			<role name="Context" element="com.ramesh.ood.principles.singleresponsibility.good.UserService" />
+			<role name="State" element="com.ramesh.ood.principles.singleresponsibility.good.IEmailService" />
+			<role name="state" element="com.ramesh.ood.principles.singleresponsibility.good.UserService::emailService:com.ramesh.ood.principles.singleresponsibility.good.IEmailService" />
+			<role name="Request()" element="com.ramesh.ood.principles.singleresponsibility.good.UserService::registerUser(com.ramesh.ood.principles.singleresponsibility.good.User):void" />
+		</instance>
+		<instance>
+			<role name="Context" element="com.ramesh.ood.principles.dependencyinversion.good.CustomerDaoImpl" />
+			<role name="State" element="com.ramesh.ood.principles.dependencyinversion.good.DataSource" />
+			<role name="state" element="com.ramesh.ood.principles.dependencyinversion.good.CustomerDaoImpl::dataSource:com.ramesh.ood.principles.dependencyinversion.good.DataSource" />
+			<role name="Request()" element="com.ramesh.ood.principles.dependencyinversion.good.CustomerDaoImpl::getConnection():java.sql.Connection" />
+		</instance>
+	</pattern>
+	<pattern name="Strategy" />
+	<pattern name="Bridge" />
+	<pattern name="Template Method" />
+	<pattern name="Visitor" />
+	<pattern name="Proxy" />
+	<pattern name="Proxy2" />
+	<pattern name="Chain of Responsibility" />
+</system>
+
